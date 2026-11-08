@@ -1,0 +1,14 @@
+.root-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+nav a.active{
+    text-decoration: underline;
+    color: green;
+    font-size: 20px ;
+    padding-bottom: 10px;
+    font-weight: bold;
+
+}
