@@ -6,9 +6,9 @@ const PostDetail = () => {
     console.log(post)
 
     return (
-        <div>
-            {/* <h2>{post.title}</h2>
-            <p>{post.body}</p> */}
+        <div style={{border:"2px solid blue",padding: "10px"}}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
             
         </div>
     );
