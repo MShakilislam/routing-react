@@ -1,14 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router';
+import { useState } from "react";
+import { Link } from "react-router";
 
-const User = ({user}) => {
-    const {id,name,email,phone} = user
+const User = ({ user }) => {
 
-    const userStyle ={
-        border :"2px solid yellow",
+    const [showInfo, setShowInfo] = useState(false);
+    const { id, name, email, phone } = user
+
+    const userStyle = {
+        border: "2px solid yellow",
         borderRadius: "20px",
-        padding:"10px",
-        margin:"10px"
+        padding: "10px",
+        margin: "10px"
     }
 
     return (
@@ -17,6 +19,9 @@ const User = ({user}) => {
             <p>Email : {email}</p>
             <p>Phone : {phone}</p>
             <Link to={`/Users/${id}`}>Show Detail</Link>
+            <button onClick={() => setShowInfo(!showInfo)}>
+                {showInfo ? "Hide Info" : "Show Info"}
+            </button>
         </div>
     );
 };
